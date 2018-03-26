@@ -6,10 +6,11 @@ public class ImagesMove : MonoBehaviour {
 
 	int[] posX = new int[] { 0, -18, -36, -54 };
 	int idx = 0;
+	public AudioSource[] audio; 
 
 	// Use this for initialization
 	void Start () {
-
+		audio[idx].Play(); 
 	}
 	
 	// Update is called once per frame
@@ -19,6 +20,7 @@ public class ImagesMove : MonoBehaviour {
 			if (idx < posX.Length - 1)
 			{
 				idx++;
+				audio[idx].Play(); 
 			}
 		}
 
@@ -27,6 +29,7 @@ public class ImagesMove : MonoBehaviour {
 			if (idx > 0)
 			{
 				idx--;
+				audio[idx].Play(); 
 			}
 		}
 
